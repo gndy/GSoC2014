@@ -10,6 +10,7 @@
     - 2008-2012: Bachelor of Science in Biology Science, Hebei University, Baoding, China;
     - 2012-2014: Master of Science in Bioinformatics, University of Chinese Academy of Sciences, Beijing, China.
 
+---------------------------------------
 ### Programming Experience
 
 - **Java**:about 3 years **Android**:1 year
@@ -19,3 +20,22 @@
     - Some Python scripts for my research.(http://github.com/gndy/PythonCode ).
 
 - I also wrote some small Java program for my classmates.(http://github.com/gndy?tab=repositories ).
+
+-----------------------------------------
+
+### Goals for GSoC
+
+My interests are phylogenetics and Next-Generation Sequencing(NGS).Now I am working on the drug resistance of HBV based on Ultra-deep Pyrosequencing(UDPS) data.I have wrote many Java programs for my research,but never designed a whole package in a library.I think it is nice to have such kind of experience.
+
+-------------------------------------------
+
+### Summer Plan
+
+I dont't have plans in summer that conflict with GSoC.So I have enough time to work and focus on the project.
+
+-------------------------------
+
+### Ideas for the Project
+
+-Description of the project
+    
