@@ -37,5 +37,21 @@ I dont't have plans in summer that conflict with GSoC.So I have enough time to w
 
 ### Ideas for the Project
 
--Description of the project
-    
+- Description of the project
+   JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it will go through a long period case jugement(64 in the worst situation).As konwn,in cpu's perspect,a lot of jumps are very time consuming.So it is necessary to redesign this complex class.
+
+- Timeline
+
+#### Week1(5.19-5.25)
+    - Set up code repos and blog
+    - Download JSBML source code and import to Eclipse
+    - Read SBML papers and JSBML source code to get deeper understanding
+
+#### Week2(5.26-6.1)
+    - Redesign ASTNode as a abstract class and implement some common methods 
+    - Classify all the 64 types into 6 group:number,operator,name of identifier,constant,basic function and logical and relational function
+    - Design 6 abstract classes for these groups
+    - Implement the common methods within each group 
+
+#### Week3 (6.2-6.8)
+    - 
