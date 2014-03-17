@@ -35,23 +35,52 @@ I dont't have plans in summer that conflict with GSoC.So I have enough time to w
 
 -------------------------------
 
-### Ideas for the Project
+### Ideas for the Project 
+JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it will go through a long period case jugement(64 in the worst situation).As konwn,in cpu's perspect,a lot of jumps are very time consuming.So it is necessary to redesign this complex class.
 
-- Description of the project
-   JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it will go through a long period case jugement(64 in the worst situation).As konwn,in cpu's perspect,a lot of jumps are very time consuming.So it is necessary to redesign this complex class.
-
-- Timeline
+### Timeline
 
 #### Week1(5.19-5.25)
-    - Set up code repos and blog
-    - Download JSBML source code and import to Eclipse
-    - Read SBML papers and JSBML source code to get deeper understanding
+- Set up code repos and blog
+- Download JSBML source code and import to Eclipse
+- Read SBML papers and JSBML source code to get deeper understanding
 
 #### Week2(5.26-6.1)
-    - Redesign ASTNode as a abstract class and implement some common methods 
-    - Classify all the 64 types into 6 group:number,operator,name of identifier,constant,basic function and logical and relational function
-    - Design 6 abstract classes for these groups
-    - Implement the common methods within each group 
+- Modify the ASTNode to a facade
+- Classify all the 64 types into 6 group:number,operator,name of identifier,constant,basic function and logical and relational function
+- Design 6 abstract classes for these groups
+- Implement the common methods within each group 
 
 #### Week3 (6.2-6.8)
-    - 
+- Design  classes representing numbers:REAL,INTEGER.  
+- Design classes representing constants:PI,E,TRUE,FALSE,AVOGADRO and REAL_E.
+- Test with ASTNode class
+
+#### Week4 (6.9-6.15)
+- Design classes representing operators
+- Including POWER,PLUS,MINUS,TIMES,DIVIDE,RATIONAL,NAME_TIME and FUNCTION_DELAY.
+- Test with ASTNode class
+
+#### Week5 (6.16-6.22)
+- Design classes representing names of identifiers:PARAMETERS, FUNCTIONS, SPECIES etc.
+- Test with ASTNode class
+
+#### Week6(6.23-6.29)
+- Design classes representing logical and relational functions
+- Logical: AND,OR,NOT,XOR 
+- Relational:EQ,NEQ,GEQ,LEQ,LT,GT
+- Test with ASTNode class
+
+#### Week7-Week9 (6.30-7.20)
+- Design classes representing basic-functions
+- 36 functions in total
+- Test with ASTNode class
+
+#### Week10-Week11 (7.21-8.3)
+- Integrate all the classes
+- Overall test and debug
+
+#### Week12-Week13 (8.4-8.18)
+- cleanup existing code,complete the comments
+- Write documentation and tutorial for this package
+- Submit everything to Google
