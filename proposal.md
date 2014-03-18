@@ -14,7 +14,7 @@
 ### Programming Experience
 
 - **Java**:about 3 years **Android**:1 year
-    - **SnoreHunter**(http://github.com/gndy/SnoreHunter) An Android app to record snore in sleep.It can calculate the total and seperate snore time,andrecord the begin time of each snore period.When users listen to the record,they can just jump to each snore begin timepoint without going through the whole record.I got a recognition award in the programming contest hold by the National Science Library, Chinese Academy of Sciences (NSLC)(http://www.openinnovation.cn/node/10523) .
+    - **SnoreHunter**(http://github.com/gndy/SnoreHunter) An Android app to record snore in sleep.It can calculate the total and seperate snore time,andrecord the begin time of each snore period.When users listen to the record,they can just jump to each snore begin timepoint without going through the whole record.I got a recognition award in the programming contest hold by the National Science Library, Chinese Academy of Sciences (NSLC)(http://www.openinnovation.cn/node/10523 ).
 
 - **Python**: 1 year
     - Some Python scripts for my research.(http://github.com/gndy/PythonCode ).
@@ -25,18 +25,18 @@
 
 ### Goals for GSoC
 
-My interests are phylogenetics and Next-Generation Sequencing(NGS).Now I am working on the drug resistance of HBV based on Ultra-deep Pyrosequencing(UDPS) data.I have wrote many Java programs for my research,but never designed a whole package in a library.I think it is nice to have such kind of experience.
+My interests are phylogenetics and Next-Generation Sequencing(NGS).Now I am working on the drug resistance of HBV based on Ultra-deep Pyrosequencing(UDPS) data.I have wrote many Java programs for my research,but never designed a whole package in a library.I think it is cool to engage in GSoC and will be a nice experience.
 
 -------------------------------------------
 
 ### Summer Plan
 
-I dont't have plans in summer that conflict with GSoC.So I have enough time to work and focus on the project.
+I dont't have plans that conflict with GSoC in summer.So I have enough time to work on the project.
 
 -------------------------------
 
 ### Ideas for the Project 
-JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it might go through a long period type matching(64 at worst).As known,conditional jumps are very time consuming from CPU's perspective.So it is necessary to redesign this complex class.In redesignment, ASTNode class could be kept as a facade to expose the same interface for compatibility.All the methods in ASTNode are implemented by a serials of well organized small classes which are also base on TreeNode structure.Redesignment is based on the Facade and Composite pattern.
+JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration which contains 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it might go through a long period type matching(64 at worst).As known,conditional jumps are very time consuming from CPU's perspective.So it is necessary to redesign this complex class.In redesignment, ASTNode class could be kept as a facade to expose the same interface for compatibility.All the methods in ASTNode are implemented by a serials of well organized small classes which are also base on TreeNode structure.Redesignment is according to the Facade and Composite pattern.
 
 ### Timeline
 
