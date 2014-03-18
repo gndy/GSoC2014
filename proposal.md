@@ -40,47 +40,71 @@ JSBML uses the concept of abstract syntax trees to work with mathematical expres
 
 ### Timeline
 
-#### Week1 (5.19-5.25)
-- Set up code repos and blog
-- Download JSBML source code and import to Eclipse
-- Read SBML papers and JSBML source code to get deeper understanding
+#### Week1 (5.19-5.25) preparation
+- Set up code repos and blog.
+- Download JSBML source code and import to Eclipse.
+- Read SBML papers and JSBML source code to get deeper a understanding.
+- **Difficulty**:easy.
 
-#### Week2 (5.26-6.1)
-- Modify the ASTNode to a facade
-- Classify all the 64 types into 6 group:number,operator,name of identifier,constant,basic function and logical and relational function
-- Design 6 abstract classes for these groups
-- Implement the common methods within each group 
+#### Week2 (5.26-6.1) overall design
+- Keep the old ASTNode class as a facade and implement some basic methods.
+- Classify all the 64 types into 6 groups:number,operator,name of identifier,constant,basic function and logical and relational function.
+- Design 6 abstract classes for these groups.
+- Implement the basic methods of each abstract class.
+- **Difficulty**:hard.The ASTNode is a very complex class with a lot of fields and methods.How to make it become a facade and coordinate with all the small classes is challenging.
 
-#### Week3 (6.2-6.8)
-- Design classes representing numbers:REAL,INTEGER.  
-- Design classes representing constants:PI,E,TRUE,FALSE,AVOGADRO and REAL_E.
-- Test with ASTNode class
+#### Week3 (6.2-6.8) numbers and constants
+- Design classes for numbers:REAL,INTEGER.  
+- Design classes for constants:PI,E,TRUE,FALSE,AVOGADRO and REAL_E.
+- Implement the related part in ASTNode and Test. 
+- **Difficulty**:easy.These types are simple and easy to understand.
 
-#### Week4 (6.9-6.15)
-- Design classes representing operators
+#### Week4 (6.9-6.15) operators
+- Design classes for operators
 - Including POWER,PLUS,MINUS,TIMES,DIVIDE,RATIONAL,NAME_TIME and FUNCTION_DELAY.
-- Test with ASTNode class
+- Implement the related part in ASTNode and Test. 
+- **Difficulty**:easy.
 
-#### Week5 (6.16-6.22)
-- Design classes representing names of identifiers:PARAMETERS, FUNCTIONS, SPECIES etc.
-- Test with ASTNode class
+#### Week5 (6.16-6.22) names of identifiers
+- Design classes for names of idetifiers:PARAMETERS, FUNCTIONS, SPECIES etc.
+- Implement the related part in ASTNode and Test.
+- **Difficulty**:medium.These types are from SBML model,need to refer the SBML papers.
 
-#### Week6(6.23-6.29)
-- Design classes representing logical and relational functions
-- Logical: AND,OR,NOT,XOR 
-- Relational:EQ,NEQ,GEQ,LEQ,LT,GT
-- Test with ASTNode class
+#### Week6(6.23-6.29) logical and relational functions
+- Design classes for logical and relational functions.
+- Logical: AND,OR,NOT,XOR.
+- Relational:EQ,NEQ,GEQ,LEQ,LT,GT.
+- Implement the related part in ASTNode and Test.
+- **Difficulty**:easy.
 
-#### Week7-Week9 (6.30-7.20)
-- Design classes representing basic-functions
-- 36 functions in total
-- Test with ASTNode class
+#### Week7 (6.30-7.6) part 1 of 36 basic functions
+- Design classes for basic-functions.
+- Most of them are trigonometric functions.
+- Implement the related part in ASTNode and Test.
+- **Difficulty**:easy.
 
-#### Week10-Week11 (7.21-8.3)
-- Integrate all the classes
-- Overall test and debug
+#### Week8 (7.7-7.13) part 2 of 36 basic functions
+- Continue designing classes for basic-functions.
+- Implement the related part in ASTNode and Test.
+- **Difficulty**:easy.
 
-#### Week12-Week13 (8.4-8.18)
-- cleanup existing code,complete the comments
+#### Week9 (7.14-7.20) part 3 of 36 basic functions
+- Continue designing classes for basic-functions.
+- Implement the related part in ASTNode and Test.
+- **Difficulty**:easy.
+
+#### Week10 (7.21-7.27) integration and test
+- Integrate all the classes.
+- Overall test and debug.
+- **Difficulty**:medium to hard.Overall test and debug will be hard because of the complex structure of ASTNode.
+
+#### Week11 (7.28-8.3) test and debug
+- Still test and debug.
+
+#### Week12 (8.4-8.10) clean up 
+- cleanup existing code.
+- complete the comments.
+
+#### Week13 (8.11-8.18) documentation and tutorial
 - Write documentation and tutorial for this package
-- Submit everything to Google
+- Submit everything needed. 
