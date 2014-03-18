@@ -1,4 +1,4 @@
-# Redesignment of the mathmatical classes
+# Redesign the implementation of mathematical formulas in JSBML
 
 ### Personal Information
 
@@ -102,8 +102,8 @@ JSBML uses the concept of abstract syntax trees to work with mathematical expres
 - Still test and debug.
 
 #### Week12 (8.4-8.10) clean up 
-- cleanup existing code.
-- complete the comments.
+- Cleanup existing code.
+- Complete the comments.
 
 #### Week13 (8.11-8.18) documentation and tutorial
 - Write documentation and tutorial for this package
