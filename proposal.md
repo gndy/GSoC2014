@@ -36,23 +36,23 @@ I dont't have plans in summer that conflict with GSoC.So I have enough time to w
 -------------------------------
 
 ### Ideas for the Project 
-JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it will go through a long period case jugement(64 in the worst situation).As konwn,in cpu's perspect,a lot of jumps are very time consuming.So it is necessary to redesign this complex class.
+JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration with 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it might go through a long period type matching(64 at worst).As known,conditional jumps are very time consuming from CPU's perspective.So it is necessary to redesign this complex class.In redesignment, ASTNode class could be kept as a facade to expose the same interface for compatibility.All the methods in ASTNode are implemented by a serials of well organized small classes which are also base on TreeNode structure.Redesignment is based on the Facade and Composite pattern.
 
 ### Timeline
 
-#### Week1(5.19-5.25)
+#### Week1 (5.19-5.25)
 - Set up code repos and blog
 - Download JSBML source code and import to Eclipse
 - Read SBML papers and JSBML source code to get deeper understanding
 
-#### Week2(5.26-6.1)
+#### Week2 (5.26-6.1)
 - Modify the ASTNode to a facade
 - Classify all the 64 types into 6 group:number,operator,name of identifier,constant,basic function and logical and relational function
 - Design 6 abstract classes for these groups
 - Implement the common methods within each group 
 
 #### Week3 (6.2-6.8)
-- Design  classes representing numbers:REAL,INTEGER.  
+- Design classes representing numbers:REAL,INTEGER.  
 - Design classes representing constants:PI,E,TRUE,FALSE,AVOGADRO and REAL_E.
 - Test with ASTNode class
 
