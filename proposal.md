@@ -36,7 +36,7 @@ I dont't have plans that conflict with GSoC in summer.So I have enough time to w
 -------------------------------
 
 ### Ideas for the Project 
-JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration which contains 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it might go through a long period type matching(64 at worst).As known,conditional jumps are very time consuming from CPU's perspective.So it is necessary to redesign this complex class.In redesignment, ASTNode class could be kept as a facade to expose the same interface for compatibility.All the methods in ASTNode are implemented by a serials of well organized small classes which are also base on TreeNode structure.Redesignment is according to the Facade and Composite pattern.
+JSBML uses the concept of abstract syntax trees to work with mathematical expressions. At the moment, all different kinds of formulas are implemented in one complex class,ASTNode.It has a nested enumeration which contains 64 different types and many methods to deal with these types.This is not very efficient and straightforward.For example,every time compiling a ASTNode to ASTNodeValue,it might go through a long period type matching(64 at worst).As known,conditional jumps are very time consuming from CPU's perspective.So it is necessary to redesign this complex class.In redesignment, ASTNode class could be kept as a facade to expose the same interface for compatibility.All the methods in ASTNode are implemented by a serials of well organized small classes which are also base on TreeNode structure.The redesign is according to the Facade and Composite pattern.
 
 ### Timeline
 
@@ -108,3 +108,10 @@ JSBML uses the concept of abstract syntax trees to work with mathematical expres
 #### Week13 (8.11-8.18) documentation and tutorial
 - Write documentation and tutorial for this package
 - Submit everything needed. 
+
+### References
+1. Hucka, M.; Finney, A.; Sauro, H. M.; Bolouri, H.; Doyle, J. C.; Kitano, H.; Arkin, A. P.; Bornstein, A. P.; Bray, B. J.; Cornish-Bowden, D.; Cuellar, A.; Dronov, A. A.; Gilles, S.; Ginkel, E. D.; Gor, M.; Goryanin, V.; Hedley, I. I.; Hodgman, W. J.; Hofmeyr, T. C.; Hunter, J. -H.; Juty, P. J.; Kasberger, N. S.; Kremling, J. L.; Kummer, A.; Le Novère, U.; Loew, N.; Lucio, L. M.; Mendes, D.; Minch, P.; Mjolsness, E. (2003). "The systems biology markup language (SBML): A medium for representation and exchange of biochemical network models". Bioinformatics 19 (4): 524–531. doi:10.1093/bioinformatics/btg015. PMID 12611808.
+2. Hucka, Michael. "History of SBML". Retrieved 3 January 2010.
+3. Drager, A.; Rodriguez, N.; Dumousseau, M.; Dorr, A.; Wrzodek, C.; Le Novere, N.; Zell, A.; Hucka, M. (2011). "JSBML: A flexible Java library for working with SBML". Bioinformatics 27 (15): 2167–2168.
+4. Bornstein BJ, Keating SM, Jouraku A, Hucka M (2008) Libsbml: an api library for sbml. Bioinformatics 24: 880–881.
+5. JSBML's User Guide. This guide includes a general introduction to working with SBML using JSBML and the documentation on the differences between JSBML and libSBML.
